@@ -51,7 +51,7 @@ display: none;
 const editorProps = {
   attributes: {
     class:
-      "prose dark:prose-invert prose-sm sm:prose-base lg:prose-lg xl:prose-2xl m-5 focus:outline-none overflow-y-scroll max-h-[calc(100vh-10rem)]",
+      "prose dark:prose-invert prose-sm sm:prose-base lg:prose-lg xl:prose-2xl focus:outline-none overflow-y-scroll max-h-[calc(100vh-8rem)] mx-auto",
   },
 };
 

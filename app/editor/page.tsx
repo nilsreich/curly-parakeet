@@ -12,8 +12,8 @@ export default function Editor() {
       <div className="grow flex">
         <Rail />
         <Sidebar />
-        <main className="grow p-4">
-            <Tiptap />
+        <main className="grow w-full">
+          <Tiptap />
         </main>
         <Chat />
       </div>

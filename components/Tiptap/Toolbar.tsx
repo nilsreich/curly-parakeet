@@ -83,13 +83,13 @@ export const Toolbar = () => {
     editor.isActive("heading", { level: 6 }) && setStyle("heading6");
   });
   return (
-    <div className="flex gap-2 w-full p-2">
+    <div className="flex gap-2 w-full px-4 py-1 border-b sticky">
       <Select
         defaultValue={"paragraph"}
         value={style}
         onValueChange={(e: string) => setStyle2(e)}
       >
-        <SelectTrigger className="w-[180px]">
+        <SelectTrigger className="w-[180px] ">
           <SelectValue placeholder="Select a style" />
         </SelectTrigger>
         <SelectContent>
@@ -111,7 +111,7 @@ export const Toolbar = () => {
         disabled={!editor.can().chain().focus().toggleBold().run()}
         className={editor.isActive("bold") ? "bg-accent" : ""}
       >
-        <BoldIcon strokeWidth={"1"} />
+        <BoldIcon strokeWidth={"1"} size={16}/>
       </Button>
       <Button
         variant={"ghost"}
@@ -120,7 +120,7 @@ export const Toolbar = () => {
         disabled={!editor.can().chain().focus().toggleItalic().run()}
         className={editor.isActive("italic") ? "is-active" : ""}
       >
-        <ItalicIcon strokeWidth={"1"} />
+        <ItalicIcon strokeWidth={"1"} size={16}/>
       </Button>
       <Button
         variant={"ghost"}
@@ -129,7 +129,7 @@ export const Toolbar = () => {
         disabled={!editor.can().chain().focus().toggleStrike().run()}
         className={editor.isActive("strike") ? "is-active" : ""}
       >
-        <StrikethroughIcon strokeWidth={"1"} />
+        <StrikethroughIcon strokeWidth={"1"} size={16}/>
       </Button>
 
       <Button
@@ -137,7 +137,7 @@ export const Toolbar = () => {
         size={"icon"}
         onClick={() => editor.chain().focus().unsetAllMarks().run()}
       >
-        <RemoveFormattingIcon strokeWidth={"1"} />
+        <RemoveFormattingIcon strokeWidth={"1"} size={16}/>
       </Button>
 
       <Button
@@ -146,7 +146,7 @@ export const Toolbar = () => {
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         className={editor.isActive("bulletList") ? "is-active" : ""}
       >
-        <ListIcon strokeWidth={"1"} />
+        <ListIcon strokeWidth={"1"} size={16}/>
       </Button>
       <Button
         variant={"ghost"}
@@ -154,7 +154,7 @@ export const Toolbar = () => {
         onClick={() => editor.chain().focus().toggleOrderedList().run()}
         className={editor.isActive("orderedList") ? "is-active" : ""}
       >
-        <ListOrderedIcon strokeWidth={"1"} />
+        <ListOrderedIcon strokeWidth={"1"} size={16}/>
       </Button>
       <Button
         variant={"ghost"}
@@ -162,7 +162,7 @@ export const Toolbar = () => {
         onClick={() => editor.chain().focus().toggleCodeBlock().run()}
         className={editor.isActive("codeBlock") ? "is-active" : ""}
       >
-        <CodeIcon strokeWidth={"1"} />
+        <CodeIcon strokeWidth={"1"} size={16}/>
       </Button>
       <Button
         variant={"ghost"}
@@ -170,21 +170,21 @@ export const Toolbar = () => {
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         className={editor.isActive("blockquote") ? "is-active" : ""}
       >
-        <QuoteIcon strokeWidth={"1"} />
+        <QuoteIcon strokeWidth={"1"} size={16}/>
       </Button>
       <Button
         variant={"ghost"}
         size={"icon"}
         onClick={() => editor.chain().focus().setHorizontalRule().run()}
       >
-        <SeparatorHorizontalIcon strokeWidth={"1"} />
+        <SeparatorHorizontalIcon strokeWidth={"1"} size={16}/>
       </Button>
       <Button
         variant={"ghost"}
         size={"icon"}
         onClick={() => editor.chain().focus().setHardBreak().run()}
       >
-        <WrapTextIcon strokeWidth={"1"} />
+        <WrapTextIcon strokeWidth={"1"} size={16}/>
       </Button>
       <Button
         variant={"ghost"}
@@ -192,7 +192,7 @@ export const Toolbar = () => {
         onClick={() => editor.chain().focus().undo().run()}
         disabled={!editor.can().chain().focus().undo().run()}
       >
-        <UndoIcon strokeWidth={"1"} />
+        <UndoIcon strokeWidth={"1"} size={16}/>
       </Button>
       <Button
         variant={"ghost"}
@@ -200,7 +200,7 @@ export const Toolbar = () => {
         onClick={() => editor.chain().focus().redo().run()}
         disabled={!editor.can().chain().focus().redo().run()}
       >
-        <RedoIcon strokeWidth={"1"} />
+        <RedoIcon strokeWidth={"1"} size={16}/>
       </Button>
     </div>
   );
